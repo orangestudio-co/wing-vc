@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wing-vc-newsletter-signup",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-14",
+  "vars": {
+    // Not secret — Mailchimp list IDs are already exposed in embed forms.
+    "MAILCHIMP_LIST_ID": "REPLACE_WITH_LIST_ID"
+  }
+}
