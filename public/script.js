@@ -235,11 +235,11 @@ function aboutPage() {
   const group = component.querySelector("[data-people='group']");
   if (!group) return;
 
+  const marginCycle = [0, 2.5, 5, 2.5];
   items.forEach((i, idx) => {
-    const [min, max] = idx % 2 === 0 ? [0, 3.4] : [3, 6];
     i.style.setProperty(
       "--margin-top",
-      `${min + Math.random() * (max - min)}rem`,
+      `${marginCycle[idx % marginCycle.length]}rem`,
     );
   });
 
