@@ -2,6 +2,7 @@
 const exact = {
   "/": homepage,
   "/about": aboutPage,
+  "/companies": portfolioPage,
 };
 
 const prefixes = [["/people/", peopleCollectionPage]];
@@ -278,4 +279,16 @@ function peopleCollectionPage() {
   if (readMore?.querySelector(".w-dyn-empty")) {
     readMore.remove();
   }
+}
+
+function portfolioPage() {
+  const selectItem = document.querySelectorAll("[data-select='item']");
+  selectItem.forEach((i) => {
+    const select = i.querySelector("[data-select='field']");
+    const option = i.querySelectorAll("[data-select='option']");
+
+    option.forEach((o) => {
+      select.appendChild(o);
+    });
+  });
 }
