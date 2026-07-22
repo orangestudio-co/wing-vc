@@ -291,4 +291,11 @@ function portfolioPage() {
       select.appendChild(o);
     });
   });
+
+  const filterButton = document.querySelector("[data-filters='show']");
+  const filters = document.querySelector(".c-filters_form_wrap");
+  filterButton.addEventListener("click", () => {
+    filterButton.style.display = "none";
+    filters.style.display = "block";
+  });
 }
